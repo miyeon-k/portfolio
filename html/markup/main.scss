@@ -1,0 +1,369 @@
+$component-name: "flagship-buying";
+
+.#{$component-name} {
+  @include vw-font-size-pc(14);
+  @include vw-convert-pc(letter-spacing, -0.35);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    @include vw-convert-pc(height, 71);
+    margin: 0 auto;
+    @include vw-convert-pc(padding-left, 30);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #f5f5f5;
+  }
+
+  &__info {
+    &-name {
+      @include vw-convert-pc(padding-bottom, 4);
+      font-weight: 700;
+      @include vw-font-size-pc(18);
+      @include vw-convert-pc(letter-spacing, -0.95);
+    }
+
+    &-price {
+      font-weight: 700;
+      @include vw-font-size-pc(16);
+      @include vw-convert-pc(letter-spacing, -0.95);
+      color: #3277c2;
+      vertical-align: baseline;
+    }
+  }
+
+  &__button {
+    @include vw-convert-pc(padding, 12 48);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__contents {
+    @include vw-convert-pc(padding, 31 0 27 0);
+  }
+
+  &__title {
+    @extend %SamsungSharpSans;
+    @include vw-font-size-pc(28);
+    @include vw-convert-pc(letter-spacing, -1.3);
+    text-align: center;
+  }
+
+  &__description {
+    @include vw-convert-pc(margin-top, 14);
+    @include vw-font-size-pc(15);
+    text-align: center;
+  }
+
+  &__choose {
+    display: flex;
+    @include vw-convert-pc(width, 1180);
+    @include vw-convert-pc(margin, 43 auto 0 auto);
+
+    &-list {
+      &:not(:last-child) {
+        @include vw-convert-pc(margin-right, 20);
+      }
+    }
+  }
+
+  &__product {
+    position: relative;
+    overflow: hidden;
+    @include vw-convert-pc(width, 280);
+    @include vw-convert-pc(padding, 20 20 130 20);
+    border: 1px solid #dadada;
+    @include vw-convert-pc(border-radius, 18);
+
+    &-image {
+      @include vw-convert-pc(width, 238);
+      @include vw-convert-pc(height, 180);
+      text-align: center;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-contents {
+      @include vw-convert-pc(margin-top, 17);
+
+      &-title {
+        @include vw-convert-pc(min-height, 37);
+        @include vw-convert-pc(padding, 0 5);
+        @extend %SamsungSharpSans;
+        @include vw-font-size-pc(15);
+        @include line-height-pc(1.2);
+      }
+
+      &-color {
+        display: flex;
+        justify-content: center;
+        @include vw-convert-pc(margin-top, 20);
+      }
+    }
+  }
+
+  &__choose-color {
+    &:not(:last-child) {
+      @include vw-convert-pc(margin-right, 7);
+    }
+
+    input[type="radio"] {
+      display: none;
+      
+      + .color-label {
+        display: table;
+        @include vw-convert-pc(width, 24);
+        @include vw-convert-pc(height, 24);
+        @include vw-convert-pc(padding, 3);
+        border: 1px solid transparent;
+        border-radius: 50%;
+
+        .label-bullet {
+          display: table-cell;
+          width: 100%;
+          height: 100%;
+          border: 1px solid rgba(0, 0, 0, 0.56);
+          border-radius: 50%;
+          cursor: pointer;
+
+          &.color-white {
+            background: #fff;
+          }
+  
+          &.color-black {
+            background: #000;
+          }
+  
+          &.color-blue {
+            background: #8fb1f7;
+          }
+  
+          &.color-red {
+            background: #e53427;
+          }
+        }
+      }
+
+      &:checked {
+        + .color-label {
+          border-color: #0077c8;
+        }
+      }
+    }
+  }
+
+  &__choose-stock {
+    position: absolute;
+    @include vw-convert-pc(bottom, 25);
+    width: 100%;
+    @include vw-convert-pc(padding-right, 40);
+    text-align: center;
+    font-weight: 700;
+    color: #d93b30;
+  }
+
+  &__radio {
+    display: flex;
+    justify-content: center;
+    @include vw-convert-pc(margin-top, 30);
+
+    input[type="radio"] {
+      display: none;
+      
+      + .radio-label {
+        cursor: pointer;
+
+        &:before {
+          display: block;
+          @include vw-convert-pc(width, 14);
+          @include vw-convert-pc(height, 14);
+          border: 1px solid #ececee;
+          border-radius: 50%;
+          content: '';
+          transition: all 250ms ease;
+        }
+      }
+
+      &:checked {
+        + .radio-label {
+          &:before {
+            border-color: #0077c7;
+            background-color: #0077c7;
+            box-shadow: inset 0 0 0 0.214em #fff;
+          }
+        }
+      }
+
+      &:disabled {
+        + .radio-label {
+          cursor: initial;
+        }
+      }
+    }
+  }
+
+  &__disclaimer {
+    @include vw-convert-pc(width, 1180);
+    @include vw-convert-pc(margin, 38 auto 0 auto);
+    @include vw-font-size-pc(13);
+  }
+}
+
+@include breakpoint(mobile) {
+  .#{$component-name} {
+    @include vw-font-size-mo(14);
+    @include vw-convert-mo(letter-spacing, -0.35);
+
+    &__top {
+      @include vw-convert-mo(height, auto);
+      @include vw-convert-mo(padding, 19 0 19 19);
+    }
+
+    &__info {
+      @include vw-font-size-mo(12);
+
+      &-name {
+        @include vw-convert-mo(padding-bottom, 4);
+        @include vw-font-size-mo(13);
+        @include vw-convert-mo(letter-spacing, -0.75);
+      }
+  
+      &-price {
+        @include vw-font-size-mo(13);
+        @include vw-convert-mo(letter-spacing, -0.75);
+      }
+    }
+
+    &__button {
+      @include vw-convert-mo(padding, 9 32 10 32);
+    }
+
+    &__contents {
+      @include vw-convert-mo(padding, 29 0 24 0);
+    }
+
+    &__title {
+      @include vw-font-size-mo(14);
+      @include vw-convert-mo(letter-spacing, -0.68);
+    }
+
+    &__description {
+      @include vw-convert-mo(margin-top, 11);
+      @include vw-font-size-mo(12);
+    }
+
+    &__choose {
+      display: block;
+      width: 100%;
+      @include vw-convert-mo(margin-top, 25);
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+
+      &-list {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        @include vw-convert-mo(width, 320);
+        margin: 0 auto;
+
+        &:not(:last-child) {
+          margin: 0 auto;
+        }
+
+        &:last-child {
+          border-top: 1px solid #eaeaea;
+        }
+      }
+    }
+
+    &__product {
+      display: flex;
+      flex: 1;
+      @include vw-convert-mo(padding, 34 0);
+      border: none;
+
+      &-image {
+        @include vw-convert-mo(width, 115);
+        @include vw-convert-mo(height, 115);
+        @include vw-convert-mo(margin-right, 17);
+      }
+
+      &-contents {
+        position: relative;
+        flex: 1;
+        margin-top: 0;
+
+        &-title {
+          padding: 0;
+          @include vw-font-size-mo(14);
+          @include line-height-mo(1.2);
+          @include vw-convert-mo(letter-spacing, -0.45);
+        }
+
+        &-color {
+          justify-content: flex-start;
+          @include vw-convert-mo(margin-top, 15);
+        }
+      }
+    }
+
+    &__choose-color {
+      &:not(:last-child) {
+        @include vw-convert-mo(margin-right, 8);
+      }
+
+      input[type="radio"] {
+        + .color-label {
+          @include vw-convert-mo(width, 27);
+          @include vw-convert-mo(height, 27);
+          @include vw-convert-mo(padding, 3);
+        }
+      }
+    }
+    
+    &__choose-stock {
+      display: inline-block;
+      position: relative;
+      @include vw-convert-mo(margin-top, 45);
+      padding: 0;
+      @include vw-font-size-mo(12);
+      text-align: left;
+    }
+  
+    &__radio {
+      @include vw-convert-mo(margin, 0 4 0 0);
+  
+      input[type="radio"] {        
+        + .radio-label {
+          &:before {
+            @include vw-convert-mo(width, 16);
+            @include vw-convert-mo(height, 16);
+          }
+        }
+
+        &:checked {
+          + .radio-label {
+            &::before {
+              box-shadow: inset 0 0 0 0.285em #fff;
+            }
+          }
+        }
+      }
+    }
+  
+    &__disclaimer {
+      width: 100%;
+      @include vw-convert-mo(margin-top, 12);
+      @include vw-convert-mo(padding, 0 20);
+      @include vw-font-size-mo(10);
+      @include vw-convert-mo(letter-spacing, -0.25);
+    }
+  }
+}

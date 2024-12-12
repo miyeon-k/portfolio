@@ -1,0 +1,341 @@
+<div class="trade-in-popup">
+  <div class="trade-in-popup__dimmed"></div>
+  <div class="trade-in-popup__contents">
+    <!—/* step 1. is-active 클래스가 있어야 contents-step 내용 보여짐. step1이 디폴트로 is-active 활성화 상태. */—>
+    <div class="trade-in-popup__contents-step is-active">
+      <h2 class="trade-in-popup__contents-step-title">What are you trading in?</h2>
+      <!—/* contents-step이 넘어갈수록 progress-bar에 on클래스가 추가됨. */—>
+      <div class="trade-in-popup__contents-step-progress"><span class="progress-bar on"></span><span class="progress-bar"></span><span class="progress-bar"></span><span class="progress-bar"></span></div>
+      <div class="trade-in-popup__contents-step-device">
+        <h3 class="device__title">We now accept broken devices!</h3>
+        <ul class="device__device">
+          <li class="device__device-list w310">
+            <input type="radio" name="device" id="smartphone">
+            <label for="smartphone" class="device-list-label">
+              <span class="label__category">Smartphone</span>
+              <span class="label__discount">Up To <em class="label__discount-amount">-$400.00</em></span>
+            </label>
+          </li>
+          <li class="device__device-list w310">
+            <input type="radio" name="device" id="tablet">
+            <label for="tablet" class="device-list-label">
+              <span class="label__category">Tablet</span>
+              <span class="label__discount">Up To <em class="label__discount-amount">-$250.00</em></span>
+            </label>
+          </li>
+          <li class="device__device-list w310">
+            <input type="radio" name="device" id="smartwatch">
+            <label for="smartwatch" class="device-list-label">
+              <span class="label__category">Smart Watch</span>
+              <span class="label__discount">Up To <em class="label__discount-amount">-$300.00</em></span>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="trade-in-popup__contents-step-info">
+        <h4 class="info__title">How trade-in works</h4>
+        <ol class="info__step">
+          <li class="info__step-list">
+            <span class="info__step-list-title">1. Find out what your device is worth</span>
+            <p class="info__step-list-description">Confirm the kind of device you are trading in, as well as the make and model, to see the discount you will receive.</p>
+          </li>
+          <li class="info__step-list">
+            <span class="info__step-list-title">2. Apply your discount to your basket</span>
+            <p class="info__step-list-description">Confirm the IMEI number and current condition of your device. Your discount will be instantly applied to your shopping basket.</p>
+          </li>
+          <li class="info__step-list">
+            <span class="info__step-list-title">3. Send us your old device</span>
+            <p class="info__step-list-description">Back up your files and photos, perform a factory reset, remove any SIM and microSD cards, and
+              then send us your old device within 7 days, using the freepost packaging we provide.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!—/* step 2. contents-cta 부분의 continue 버튼 클릭시 is-active 클래스 추가. 그 외 contents-step에서는 삭제 */—>
+    <div class="trade-in-popup__contents-step">
+      <h2 class="trade-in-popup__contents-step-title">Select<br class="br-mobile"> your device</h2>
+      <!—/* contents-step이 넘어갈수록 progress-bar에 on클래스가 추가됨. */—>
+      <div class="trade-in-popup__contents-step-progress"><span class="progress-bar on"></span><span class="progress-bar on"></span><span class="progress-bar"></span><span class="progress-bar"></span></div>
+      <div class="trade-in-popup__contents-step-device">
+        <div class="device__choose">
+          <!—/* 처음에는 비활성화 상태. is-select 클래스와 is-open 클래스가 없는 상태. is-select 클래스는 choose-type__list 중 하나 선택시 적용. */—>
+          <div class="device__choose-list is-select">
+            <!—/* placeholder 내의 choose-name에는 기본 디폴트값에서 choose-type__list의 선택된(클릭) list-contents-title로 변경. choose-list가 is-open인 상태가 되면 choose-list-placeholder의 aria-expanded는 true가 됨. */—>
+            <a href="#brand" class="device__choose-list-placeholder" aria-expanded="false">
+              <span class="choose-name">Apple</span>
+              <span class="choose-arrow">
+                <img src="@@imageSrc/popup_icon_arrow.png" class="arrow-image" alt="arrow icon" />
+              </span>
+            </a>
+            <div id="brand" class="device__choose-list-type">
+              <ul class="choose-type">
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">512 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$350.00</em></span>
+                  </a>
+                </li>
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">256 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$350.00</em></span>
+                  </a>
+                </li>
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">128 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$250.00</em></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!—/* 처음에는 비활성화 상태. is-select 클래스와 is-open 클래스가 없는 상태. is-select 클래스는 choose-type__list 중 하나 선택시 적용. */—>
+          <div class="device__choose-list is-select">
+            <!—/* placeholder 내의 choose-name에는 기본 디폴트값에서 choose-type__list의 선택된(클릭) list-contents-title로 변경. choose-list가 is-open인 상태가 되면 choose-list-placeholder의 aria-expanded는 true가 됨. */—>
+            <a href="#device" class="device__choose-list-placeholder" aria-expanded="false">
+              <span class="choose-name">iPhone XS Max</span>
+              <span class="choose-arrow">
+                <img src="@@imageSrc/popup_icon_arrow.png" class="arrow-image" alt="arrow icon" />
+              </span>
+            </a>
+            <div id="device" class="device__choose-list-type">
+              <ul class="choose-type">
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">512 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$350.00</em></span>
+                  </a>
+                </li>
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">256 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$350.00</em></span>
+                  </a>
+                </li>
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">128 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$250.00</em></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!—/* choose-list-type이 타겟이 되면(.device__choose-list-type:target) 높이값 100% 적용. is-open 클래스 적용됨. 타겟 외에 다른 choose-list-type은 is-open 클래스 삭제. choose-list-type 리스트에서 하나 클릭시 is-open 클래스 삭제. */—>
+          <div class="device__choose-list is-open">
+            <!—/* placeholder 내의 choose-name에는 기본 디폴트값에서 choose-type__list의 선택된(클릭) list-contents-title로 변경. choose-list가 is-open인 상태가 되면 choose-list-placeholder의 aria-expanded는 true가 됨. */—>
+            <a href="#storage" class="device__choose-list-placeholder" aria-expanded="true">
+              <span class="choose-name">Choose the storage</span>
+              <span class="choose-arrow">
+                <img src="@@imageSrc/popup_icon_arrow.png" class="arrow-image" alt="arrow icon" />
+              </span>
+            </a>
+            <div id="storage" class="device__choose-list-type">
+              <ul class="choose-type">
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">512 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$350.00</em></span>
+                  </a>
+                </li>
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">256 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$350.00</em></span>
+                  </a>
+                </li>
+                <li class="choose-type__list">
+                  <a href="#" class="choose-type__list-contents">
+                    <span class="choose-type__list-contents-title">128 GB</span>
+                    <span class="choose-type__list-contents-amount">Up To <em class="discount-amount">-$250.00</em></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!—/* step 3. contents-cta 부분의 continue 버튼 클릭시 is-active 클래스 추가. 그 외 contents-step에서는 삭제 */—>
+    <div class="trade-in-popup__contents-step">
+      <h2 class="trade-in-popup__contents-step-title">Is your device in good condition?</h2>
+      <!—/* contents-step이 넘어갈수록 progress-bar에 on클래스가 추가됨. */—>
+      <div class="trade-in-popup__contents-step-progress"><span class="progress-bar on"></span><span class="progress-bar on"></span><span class="progress-bar on"></span><span class="progress-bar"></span></div>
+      <div class="trade-in-popup__contents-step-device">
+        <h3 class="device__title">We now accept broken devices!</h3>
+        <div class="device__select">
+          <div class="device__select-model">
+            <span class="device__select-model-brand">Apple</span>
+            <p class="device__select-model-name">iPhone XS Max <em class="capacity">256 GB</em></p>
+          </div>
+          <div class="device__select-discount">
+            <span class="device__select-discount-title">Trade-in discount</span>
+            <div class="device__select-discount-amount">-$400.00</div>
+          </div>
+        </div>
+        <div class="device__button">
+          <input type="radio" name="discount" id="discount-no">
+          <label for="discount-no" class="device__button-select">No</label>
+          <input type="radio" name="discount" id="discount-yes" checked>
+          <label for="discount-yes" class="device__button-select">Yes</label>
+        </div>
+      </div>
+      <div class="trade-in-popup__contents-step-info no-line">
+        <h4 class="info__title">Select <strong>Yes</strong> if your device meets the following conditions:</h4>
+        <ul class="info__conditions">
+          <li class="info__conditions-list">
+            <div class="info__conditions-list-image">
+              <img src="@@imageSrc/popup_icon_power.png" class="icon-image" alt="power icon" />
+            </div>
+            <p class="info__conditions-list-description">Device powers on and holds charge</p>
+          </li>
+          <li class="info__conditions-list">
+            <div class="info__conditions-list-image">
+              <img src="@@imageSrc/popup_icon_display.png" class="icon-image" alt="display icon" />
+            </div>
+            <!—/* 글자 한줄일 때만 line-one 클래스 삽입 */—>
+            <p class="info__conditions-list-description line-one">Functioning display</p>
+          </li>
+          <li class="info__conditions-list">
+            <div class="info__conditions-list-image">
+              <img src="@@imageSrc/popup_icon_sign.png" class="icon-image" alt="no sign icon" />
+            </div>
+            <p class="info__conditions-list-description">No signs of screen burn, ghost imaging, discolouration,<br> coloured hues or image retention</p>
+          </li>
+          <li class="info__conditions-list">
+            <div class="info__conditions-list-image">
+              <img src="@@imageSrc/popup_icon_wear.png" class="icon-image" alt="wear & tear icon" />
+            </div>
+            <!—/* 글자 한줄일 때만 line-one 클래스 삽입 */—>
+            <p class="info__conditions-list-description line-one">Normal wear & tear</p>
+          </li>
+          <li class="info__conditions-list">
+            <div class="info__conditions-list-image">
+              <img src="@@imageSrc/popup_icon_cracks.png" class="icon-image" alt="cracks icon" />
+            </div>
+            <!—/* 글자 한줄일 때만 line-one 클래스 삽입 */—>
+            <p class="info__conditions-list-description line-one">No cracks to screen</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!—/* step 4. contents-cta 부분의 continue 버튼 클릭시 is-active 클래스 추가. 그 외 contents-step에서는 삭제. step3에서 yes 선택시 화면 */—>
+    <div class="trade-in-popup__contents-step">
+      <h2 class="trade-in-popup__contents-step-title">Add your<br class="br-mobile"> trade-in discount</h2>
+      <!—/* contents-step이 넘어갈수록 progress-bar에 on클래스가 추가됨. */—>
+      <div class="trade-in-popup__contents-step-progress"><span class="progress-bar on"></span><span class="progress-bar on"></span><span class="progress-bar on"></span><span class="progress-bar on"></span></div>
+      <div class="trade-in-popup__contents-step-device">
+        <h3 class="device__title">Trade-in discount</h3>
+        <section class="device__imei">
+          <div class="device__imei-discount">
+            <div class="device__select">
+              <div class="device__select-model">
+                <span class="device__select-model-brand">Apple</span>
+                <p class="device__select-model-name">iPhone XS Max <em class="capacity">256 GB</em></p>
+              </div>
+              <div class="device__select-discount">
+                <span class="device__select-discount-title">Trade-in discount</span>
+                <div class="device__select-discount-amount">-$400.00</div>
+              </div>
+            </div>
+            <p class="device__imei-discount-enter">Enter IMEI number of your device</p>
+            <input type="text" class="device__imei-discount-number" placeholder="IMEI number (15 digits)" />
+            <!—/* imei-discount-number 유효성 체크시 맞으면 correct, 틀리면 incorrect 노출. 노출시 on 클래스 추가. */—>
+            <div class="device__imei-discount-validation validation__correct on">Correct</div>
+            <div class="device__imei-discount-validation validation__incorrect">Incorrect</div>
+          </div>
+          <div class="device__imei-discount">
+            <div class="device__imei-discount-image"><img src="@@imageSrc/popup_imei_img.jpg" alt="imei image" /></div>
+            <dl class="device__imei-discount-how">
+              <dt class="imei-discount-how__title">How do I find<br> my IMEI number?</dt>
+              <dd class="imei-discount-how__option">
+                <span class="imei-discount-how__option-title">Option 1</span>
+                <p class="imei-discount-how__option-explanation">Open your phone’s call screen and enter <span class="imei-discount-how__option-explanation-empasis">*06#</span></p>
+              </dd>
+              <dd class="imei-discount-how__option">
+                <span class="imei-discount-how__option-title">Option 2</span>
+                <p class="imei-discount-how__option-explanation">Look for the number in a general <span class="imei-discount-how__option-explanation-empasis">“About Phone”</span> <br>section in settings</p>
+              </dd>
+            </dl>
+          </div>
+        </section>
+      </div>
+      <div class="trade-in-popup__contents-step-info check-conditions">
+        <h4 class="info__title">Please check the terms and conditions</h4>
+        <ul class="check-conditions__check">
+          <li class="check-conditions__check-list required">
+            <input type="checkbox" id="check-credit" checked/>
+            <label for="check-credit" class="checkbox-label">
+              <span class="checkbox-label-img"><img src="@@imageSrc/popup_icon_check.png" class="check-icon" alt="check icon" /></span>
+            </label>
+            <p class="check-conditions__check-list-contents">I confirm my device does not have any outstanding finance or credit, and that it meets all of the aforementioned conditions.</p>
+          </li>
+          <li class="check-conditions__check-list">
+            <input type="checkbox" id="check-agree" />
+            <label for="check-agree" class="checkbox-label">
+              <span class="checkbox-label-img"><img src="@@imageSrc/popup_icon_check.png" class="check-icon" alt="check icon" /></span>
+            </label>
+            <p class="check-conditions__check-list-contents">I have read and agree to <a class="terms-download" href="https://images.samsung.com/is/content/samsung/p5/uk/trade-in-terms/Trade-In-Terms.pdf" aria-label="Samsung Shop Online trade-in T&Cs" download="Trade-In-Terms.pdf">Samsung Shop Online trade-in T&Cs</a> | <a class="terms-download" href="https://images.samsung.com/is/content/samsung/p5/uk/trade-in-terms/SAMSUNG-STUDENT-EPP-TRADE-IN-PROGRAMME-TERMS-AND-CONDITIONS.pdf" aria-label="Student/EPP trade-in T&Cs" download="SAMSUNG-STUDENT-EPP-TRADE-IN-PROGRAMME-TERMS-AND-CONDITIONS.pdf">Student/EPP trade-in T&Cs</a>.</p>
+          </li>
+          <div class="check-conditions__check-required">*Required Field</div>
+        </ul>
+      </div>
+    </div>
+
+    <!—/* step 4. contents-cta 부분의 continue 버튼 클릭시 is-active 클래스 추가. 그 외 contents-step에서는 삭제. step3에서 no 선택시 화면 */—>
+    <div class="trade-in-popup__contents-step">
+      <h2 class="trade-in-popup__contents-step-title">Add your<br class="br-mobile"> trade-in discount</h2>
+      <!—/* contents-step이 넘어갈수록 progress-bar에 on클래스가 추가됨. */—>
+      <div class="trade-in-popup__contents-step-progress"><span class="progress-bar on"></span><span class="progress-bar on"></span><span class="progress-bar on"></span><span class="progress-bar on"></span></div>
+      <div class="trade-in-popup__contents-step-device">
+        <h3 class="device__title">Trade-in discount</h3>
+        <div class="device__select">
+          <div class="device__select-model">
+            <span class="device__select-model-brand">Apple</span>
+            <p class="device__select-model-name">iPhone XS Max <em class="capacity">256 GB</em></p>
+          </div>
+          <div class="device__select-discount">
+            <span class="device__select-discount-title">Trade-in discount</span>
+            <div class="device__select-discount-amount">-$0.00</div>
+          </div>
+        </div>
+      </div>
+      <div class="trade-in-popup__contents-step-info check-conditions check-conditions-no">
+        <h4 class="info__title">Please check the terms and conditions</h4>
+        <ul class="check-conditions__check">
+          <li class="check-conditions__check-list required">
+            <input type="checkbox" id="check-credit-no"/>
+            <label for="check-credit-no" class="checkbox-label">
+              <span class="checkbox-label-img"><img src="@@imageSrc/popup_icon_check.png" class="check-icon" alt="check icon" /></span>
+            </label>
+            <p class="check-conditions__check-list-contents">I confirm my device does not have any outstanding finance or credit, and that it meets all of the aforementioned conditions.</p>
+          </li>
+          <li class="check-conditions__check-list">
+            <input type="checkbox" id="check-agree-no" />
+            <label for="check-agree-no" class="checkbox-label">
+              <span class="checkbox-label-img"><img src="@@imageSrc/popup_icon_check.png" class="check-icon" alt="check icon" /></span>
+            </label>
+            <p class="check-conditions__check-list-contents">I have read and agree to <a class="terms-download" href="https://images.samsung.com/is/content/samsung/p5/uk/trade-in-terms/Trade-In-Terms.pdf" aria-label="Samsung Shop Online trade-in T&Cs" download="Trade-In-Terms.pdf">Samsung Shop Online trade-in T&Cs</a> | <a class="terms-download" href="https://images.samsung.com/is/content/samsung/p5/uk/trade-in-terms/SAMSUNG-STUDENT-EPP-TRADE-IN-PROGRAMME-TERMS-AND-CONDITIONS.pdf" aria-label="Student/EPP trade-in T&Cs" download="SAMSUNG-STUDENT-EPP-TRADE-IN-PROGRAMME-TERMS-AND-CONDITIONS.pdf">Student/EPP trade-in T&Cs</a>.</p>
+          </li>
+          <div class="check-conditions__check-required">*Required Field</div>
+        </ul>
+      </div>
+    </div>
+
+    <div class="trade-in-popup__contents-cta">
+      <div class="trade-in-popup__contents-cta-disclaimer">Please note that charges may apply if you fail to send us your device within the specified timescales. Read the full <a class="disclaimer__outlink" href="https://www.samsung.com/us/trade-in/terms-and-conditions/" aria-label="Samsung Shop Online trade-in T&Cs" target="_blank">Sam-sung Shop Online trade-in T&Cs</a> | <a class="disclaimer__outlink" href="https://images.samsung.com/is/content/samsung/p5/uk/trade-in-terms/SAMSUNG-STUDENT-EPP-TRADE-IN-PROGRAMME-TERMS-AND-CONDITIONS.pdf" aria-label="Student/EPP trade-in T&Cs" target="_blank">Student/EPP trade-in T&Cs</a> for more information.</div>
+      <button type="button" class="trade-in-popup__contents-cta-button color-white">Back</button>
+      <!—/* step 4에서는 continue에서 Add discount로 문구 변경. Add discount 버튼 클릭 후 팝업 닫기 */—>
+      <button type="button" class="trade-in-popup__contents-cta-button color-black">Continue</button>
+    </div>
+
+    <!—/* close 버튼 클릭시 팝업 닫기 */—>
+    <button type="button" class="trade-in-popup__close">
+      <img src="@@imageSrc/popup_icon_close.png" class="close-icon" alt="close icon" />
+    </button>
+  </div>
+</div>

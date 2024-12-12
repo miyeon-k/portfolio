@@ -1,0 +1,1068 @@
+$component-name: 'bespoke-configurator';
+
+.#{$featureName} {
+  .#{$component-name} {
+    @include vw-convert-pc(width, 1440);
+    margin: 0 auto;
+    @include vw-font-size-pc(14);
+
+    &__watch {
+      display: flex;
+
+      &-view {
+        position: relative;
+        @include vw-convert-pc(width, 760);
+        @include vw-convert-pc(padding, 60 72 47 72);
+
+        .watch-view {
+          &__start {
+            position: absolute;
+            @include vw-convert-pc(top, 36);
+            @include vw-convert-pc(left, 31);
+
+            &-icon {
+              display: inline-block;
+              @include vw-convert-pc(width, 16);
+              @include vw-convert-pc(margin-right, 2);
+            }
+
+            &-title {
+              position: relative;
+              font-weight: 700;
+
+              &:after {
+                display: block;
+                position: absolute;
+                right: 0;
+                @include vw-convert-pc(bottom, -3);
+                width: 100%;
+                @include vw-convert-pc(height, 2);
+                background: #000;
+                content: '';
+              }
+            }
+          }
+
+          &__gallery {
+            &-item {
+              @include vw-convert-pc(padding, 0 78);
+
+              img {
+                width: 100%;
+              }
+            }
+
+            &-prev, &-next {
+              @include vw-convert-pc(width, 64);
+              @include vw-convert-pc(height, 64);
+              @include vw-convert-pc(margin-top, -56);
+              color: #000;
+
+              &:after {
+                display: none;
+              }
+            }
+
+            &-prev {
+              left: 0;
+            }
+
+            &-next {
+              right: 0;
+            }
+
+            &-pagination {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              position: relative;
+              @include vw-convert-pc(width, 292);
+              @include vw-convert-pc(height, 40);
+              @include vw-convert-pc(margin, 14 auto 0 auto);
+
+              .swiper-pagination-bullet {
+                position: relative;
+                @include vw-convert-pc(width, 7);
+                @include vw-convert-pc(height, 7);
+                margin: 0;
+                background: #757575;
+                opacity: 1;
+
+                &:not(:first-child):after {
+                  display: block;
+                  position: absolute;
+                  top: 50%;
+                  z-index: -1;
+                  @include vw-convert-pc(left, -40);
+                  @include vw-convert-pc(width, 40);
+                  height: 1px;
+                  background: #757575;
+                  content: '';
+                }
+
+                &.swiper-pagination-bullet-active {
+                  @include vw-convert-pc(width, 14);
+                  @include vw-convert-pc(height, 14);
+                  background: #000;
+  
+                  &:after {
+                    @include vw-convert-pc(height, 2);
+                    background: #000;
+                    transform: translateY(-50%);
+                  }
+
+                  &:hover {
+                    .hover-icon {
+                      display: block;
+                    }
+                  }
+                }
+
+                &.is-active {
+                  background: #000;
+
+                  &:after {
+                    @include vw-convert-pc(height, 2);
+                    background: #000;
+                    transform: translateY(-50%);
+                  }
+                }
+
+                .hover-icon {
+                  display: none;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  @include vw-convert-pc(width, 40);
+                  @include vw-convert-pc(height, 40);
+                  @include vw-convert-pc(padding, 13 9);
+                  border: 1px solid rgba(0, 0, 0, 0.1);
+                  border-radius: 50%;
+                  background: #fff;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+          }
+
+          &__share {
+            position: absolute;
+            @include vw-convert-pc(top, 39);
+            @include vw-convert-pc(right, 37);
+            z-index: 1;
+            @include vw-convert-pc(width, 40);
+            @include vw-convert-pc(height, 40);
+            @include vw-convert-pc(padding, 7 8 7 6);
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+          }
+
+          &__info {
+            @include vw-convert-pc(width, 430);
+            @include vw-convert-pc(margin, 6 auto 0 auto);
+            @include vw-font-size-pc(18);
+            text-align: center;
+
+            &-model {
+              display: inline-block;
+
+              &:not(:last-child):after {
+                display: inline-block;
+                @include vw-convert-pc(width, 1);
+                @include vw-convert-pc(height, 20);
+                @include vw-convert-pc(margin, 0 5);
+                vertical-align: middle;
+                background: #000;
+                content:'';
+              }
+            }
+          }
+
+          &__buy {
+            font-weight: 700;
+            text-align: center;
+
+            &-price {
+              @include vw-convert-pc(margin-top, 31);
+              @include vw-font-size-pc(18);
+
+              .total {
+                display: none;
+              }
+
+              .from {
+                &-amount {
+                  @include vw-convert-pc(margin-left, 2);
+                  @include vw-font-size-pc(24);
+                  vertical-align: baseline;
+                }
+              }
+            }
+
+            &-button {
+              @include vw-convert-pc(margin-top, 28);
+
+              .btn {
+                @include vw-convert-pc(width, 120);
+                @include vw-font-size-pc(16);
+                @include vw-convert-pc(border-radius, 100);
+
+                &.btn-save {
+                  @include vw-convert-pc(padding, 8 10 9 10);
+                  border: 1px solid #000;
+                }
+
+                &.btn-continue {
+                  @include vw-convert-pc(padding, 9 10 10 10);
+                  background: #2189FF;
+                  color: #fff;
+                }
+
+                &:first-child {
+                  @include vw-convert-pc(margin-right, 10);
+                }
+              }
+            }
+          }
+
+          &__designs {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            @include vw-convert-pc(top, 36);
+            @include vw-convert-pc(right, 33);
+
+            &-icon {
+              display: inline-block;
+              @include vw-convert-pc(margin-right, 5);
+              @include vw-convert-pc(width, 16);
+            }
+
+            &-title {
+              position: relative;
+              font-weight: 700;
+
+              &:after {
+                display: block;
+                position: absolute;
+                right: 0;
+                @include vw-convert-pc(bottom, -4);
+                width: 100%;
+                @include vw-convert-pc(height, 2);
+                background: #000;
+                content: '';
+              }
+
+              &-number {
+                position: absolute;
+                @include vw-convert-pc(top, -7);
+                @include vw-convert-pc(right, -16);
+                @include vw-convert-pc(width, 16);
+                @include vw-convert-pc(height, 16);
+                border-radius: 50%;
+                background: #2189FF;
+                font-weight: 700;
+                @include vw-font-size-pc(12);
+                color: #fff;
+                @include line-height-pc(1.4);
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      &-select {
+        @include vw-convert-pc(width, 680);
+        @include vw-convert-pc(padding, 62 60);
+        background: #f7f7f7;
+
+        .watch-select {
+          &__inner {
+            &:last-child {
+              @include vw-convert-pc(margin-top, 54);
+            }
+          }
+
+          &__title {
+            @extend %SamsungSharpSans;
+            @include vw-font-size-pc(16);
+            @include vw-convert-pc(letter-spacing, -0.75);
+
+            &-icon {
+              display: inline-block;
+              @include vw-convert-pc(width, 18);
+              @include vw-convert-pc(margin-left, 5);
+            }
+          }
+
+          &__value {
+            @include vw-convert-pc(margin-top, 25);
+
+            &-item {
+              display: flex;
+              width: auto;
+              @include vw-convert-pc(margin-right, 6);
+              
+              .tabmenu {
+                @include vw-convert-pc(padding, 9 20);
+                @include vw-font-size-pc(12);
+                font-weight: 700;
+                border: 1px solid #000;
+                @include vw-convert-pc(border-radius, 47);
+                background: #fff;
+              }
+
+              &.swiper-slide-active {
+                .tabmenu {
+                  background: #000;
+                  color: #fff;
+                }
+              }
+            }
+
+            .value-prev, .value-next {
+              @include vw-convert-pc(width, 24);
+
+              &:after {
+                display: none;
+              }
+
+              &:before {
+                position: absolute;
+                z-index: -1;
+                @include vw-convert-pc(width, 48);
+                @include vw-convert-pc(height, 34);
+                content: '';
+              }
+
+              &.swiper-button-disabled {
+                opacity: 0;
+              }
+            }
+
+            .value-prev {
+              @include vw-convert-pc(left, -6);
+
+              &:before {
+                left: 0;
+                background: linear-gradient(to left,transparent 22.8%,#f7f7f7 56.8%);
+              }
+            }
+
+            .value-next {
+              @include vw-convert-pc(right, -6);
+
+              &:before {
+                right: 0;
+                background: linear-gradient(to right,transparent 22.8%,#f7f7f7 56.8%);
+              }
+            }
+          }
+
+          &__item {
+            display: none;
+            flex-wrap: wrap;
+            @include vw-convert-pc(margin-top, 24);
+
+            .item-list {
+              @include vw-convert-pc(width, 80);
+              @include vw-convert-pc(margin-right, 16);
+              cursor: pointer;
+
+              &:nth-child(6n) {
+                margin-right: 0;
+              }
+
+              &:nth-child(n+7) {
+                @include vw-convert-pc(margin-top, 16);
+              }
+
+              &__image {
+                width: 100%;
+                @include vw-convert-pc(height, 80);
+                @include vw-convert-pc(padding, 10);
+                border: 1px solid #C3C3C3;
+                @include vw-convert-pc(border-radius, 10);
+                background: #fff;
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              &__info {
+                @include vw-convert-pc(padding, 8 10 0 10);
+                @include vw-font-size-pc(12);
+                color: #6F7070;
+                @include line-height-pc(1.4);
+                text-align: center;
+              }
+
+              &__flag {
+                display: block;
+                @include vw-convert-pc(width, 38);
+                @include vw-convert-pc(margin, 7 auto 0 auto);
+                @include vw-convert-pc(padding, 4 6 2 6);
+                font-weight: 700;
+                @include vw-font-size-pc(12);
+                @include vw-convert-pc(border-radius, 10);
+                background: #2189FF;
+                color: #fff;
+              }
+
+              &.is-select {
+                .item-list {
+                  &__image {
+                    border: 2px solid #2189FF;
+                  }
+  
+                  &__info {
+                    font-weight: 700;
+                    color: #000;
+                  }
+                }
+              }
+            }
+
+            &.is-active {
+              display: flex;
+            }
+
+            &.band__item {
+              .item-list {
+                &__image {
+                  position: relative;
+
+                  .cart {
+                    position: absolute;
+                    @include vw-convert-pc(width, 16);
+                    @include vw-convert-pc(top, 4);
+                    @include vw-convert-pc(right, 4);
+                  }
+
+                  .zoom-in {
+                    position: absolute;
+                    @include vw-convert-pc(width, 16);
+                    @include vw-convert-pc(right, 4);
+                    @include vw-convert-pc(bottom, 3);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__info {
+      @include vw-convert-pc(padding, 40);
+      border-top: 1px solid #ebebeb;
+      color: #757575;
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__designs-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+
+      .designs-popup {
+        &__dimmed {
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0.7;
+        }
+
+        &__contents {
+          overflow-y: auto;
+          position:absolute;
+          top: 0;
+          right: 0;
+          @include vw-convert-pc(width, 260);
+          height: 100%;
+          @include vw-convert-pc(padding, 32 22 30 30);
+          background: #F7F7F7;
+          @include vw-convert-pc(scrollbar-width, 4);
+            
+          &::-webkit-scrollbar {
+            @include vw-convert-pc(width, 4);
+          }
+
+          &::-webkit-scrollbar-thumb {
+            @include vw-convert-pc(border-radius, 2);
+            background: #c3c3c3;
+          }
+
+          &-top {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .contents-top {
+              &__icon {
+                @include vw-convert-pc(width, 18);
+                @include vw-convert-pc(margin-right, 3);
+              }
+
+              &__title {
+                position: relative;
+                @extend %SamsungSharpSans;
+                @include vw-convert-pc(letter-spacing, -0.55);
+
+                &-number {
+                  position: absolute;
+                  @include vw-convert-pc(top, -7);
+                  @include vw-convert-pc(right, -17);
+                  @include vw-convert-pc(width, 16);
+                  @include vw-convert-pc(height, 16);
+                  border-radius: 50%;
+                  background: #2189FF;
+                  font-weight: 700;
+                  @include vw-font-size-pc(12);
+                  color: #fff;
+                  @include line-height-pc(1.4);
+                  text-align: center;
+                }
+              }
+
+              &__close {
+                position: absolute;
+                @include vw-convert-pc(top, -2);
+                @include vw-convert-pc(right, 8);
+                @include vw-convert-pc(width, 20);
+              }
+            }
+          }
+
+          &-no-list {
+            @include vw-convert-pc(margin-top, 18);
+
+            .contents-no-list {
+              &__title {
+                @include vw-font-size-pc(12);
+              }
+
+              &__image {
+                @include vw-convert-pc(width, 93);
+                @include vw-convert-pc(height, 93);
+                @include vw-convert-pc(margin-top, 14);
+                @include vw-convert-pc(padding, 6);
+                border: 1px dashed #C3C3C3;
+                @include vw-convert-pc(border-radius, 10);
+                background: #fff;
+              }
+            }
+          }
+
+          &-list {
+            display: flex;
+            flex-wrap: wrap;
+            @include vw-convert-pc(margin-top, 24);
+
+            .contents-list {
+              &__item {
+                position: relative;
+                @include vw-convert-pc(width, 93);
+                @include vw-convert-pc(height, 93);
+                @include vw-convert-pc(padding, 6);
+                @include vw-convert-pc(border-radius, 10);
+                background: #fff;
+
+                img {
+                  width: 100%;
+                }
+
+                &:nth-child(even) {
+                  @include vw-convert-pc(margin-left, 14);
+                }
+
+                &:nth-child(n+3) {
+                  @include vw-convert-pc(margin-top, 14);
+                }
+              }
+
+              &__delete {
+                position: absolute;
+                @include vw-convert-pc(top, -8);
+                @include vw-convert-pc(right, -8);
+                @include vw-convert-pc(width, 23);
+                @include vw-convert-pc(height, 23);
+                @include vw-convert-pc(padding, 6);
+                border-radius: 50%;
+                background: #000;
+              }
+            }
+          }
+
+          &-check {
+            @include vw-convert-pc(margin-top, 25);
+            @include vw-font-size-pc(12);
+            @include line-height-pc(1.3);
+          }
+
+          &-recommend {
+            display: flex;
+            flex-wrap: wrap;
+            @include vw-convert-pc(margin-top, 14);
+
+            .contents-recommend {
+              &__presets {
+                @include vw-convert-pc(width, 93);
+                @include vw-convert-pc(height, 93);
+                @include vw-convert-pc(padding, 6);
+                @include vw-convert-pc(border-radius, 10);
+                background: #fff;
+
+                img {
+                  width: 100%;
+                }
+
+                &:nth-child(even) {
+                  @include vw-convert-pc(margin-left, 14);
+                }
+
+                &:nth-child(n+3) {
+                  @include vw-convert-pc(margin-top, 14);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .#{$featureName} {
+    .#{$component-name} {
+      width: 100%;
+      @include vw-font-size-mo(14);
+
+      &__watch {
+        display: block;
+        position: relative;
+        @include vw-convert-mo(padding-bottom, 120);
+
+        &-view {
+          overflow: hidden;
+          position: initial;
+          width: 100%;
+          @include vw-convert-mo(padding, 38 24 18 24);
+
+          .watch-view {
+            &__start {
+              @include vw-convert-mo(top, 15);
+              @include vw-convert-mo(left, 22);
+  
+              &-icon {
+                @include vw-convert-mo(width, 28);
+                margin-right: 0;
+              }
+  
+              &-title {
+                display: none;
+              }
+            }
+
+            &__gallery {
+              overflow: visible;
+
+              &-item {
+                padding: 0;
+              }
+  
+              &-prev, &-next {
+                display: none;
+              }
+
+              &-pagination {
+                @include vw-convert-mo(width, 266);
+                @include vw-convert-mo(height, 30);
+                @include vw-convert-mo(margin-top, 10);
+  
+                .swiper-pagination-bullet {
+                  @include vw-convert-mo(width, 7);
+                  @include vw-convert-mo(height, 7);
+  
+                  &:not(:first-child):after {
+                    @include vw-convert-mo(left, -36);
+                    @include vw-convert-mo(width, 36);
+                  }
+
+                  &.swiper-pagination-bullet-active {
+                    @include vw-convert-mo(width, 14);
+                    @include vw-convert-mo(height, 14);
+
+                    &:after {
+                      @include vw-convert-mo(height, 2);
+                    }
+                  }
+
+                  &.is-active {  
+                    &:after {
+                      @include vw-convert-mo(height, 2);
+                    }
+                  }
+
+                  .hover-icon {
+                    @include vw-convert-mo(width, 40);
+                    @include vw-convert-mo(height, 40);
+                    @include vw-convert-mo(padding, 13 9);
+                  }
+                }
+              }
+            }
+
+            &__share {
+              @include vw-convert-mo(top, 32);
+              right: 0;
+              @include vw-convert-mo(width, 40);
+              @include vw-convert-mo(height, 40);
+              @include vw-convert-mo(padding, 7);
+            }
+
+            &__info {
+              @include vw-convert-mo(width, 264);
+              @include vw-convert-mo(margin-top, 6);
+              @include vw-font-size-mo(14);
+
+              &-model {
+                color: #6F7070;
+                @include line-height-mo(1.25);
+
+                &:not(:last-child):after {
+                  @include vw-convert-mo(width, 1);
+                  @include vw-convert-mo(height, 14);
+                  @include vw-convert-mo(margin, 0 4);
+                }
+              }
+            }
+
+            &__buy {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              @include vw-convert-mo(padding, 24);
+
+              &-price {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 0;
+                
+                .total {
+                  display: block;
+                  @include vw-font-size-mo(18);
+                }
+
+                .from {
+                  @include vw-font-size-mo(12);
+
+                  &-amount {
+                    @include vw-font-size-mo(18);
+                  }
+                }
+              }
+
+              &-button {
+                display: flex;
+                justify-content: space-between;
+                @include vw-convert-mo(margin-top, 12);
+
+                .btn {
+                  @include vw-convert-mo(width, 146);
+                  @include vw-font-size-mo(16);
+                  @include vw-convert-mo(border-radius, 23);
+
+                  &.btn-save {
+                    @include vw-convert-mo(padding, 8 10 9 10);
+                  }
+
+                  &.btn-continue {
+                    @include vw-convert-mo(padding, 9 10 10 10);
+                  }
+
+                  &:first-child {
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+
+            &__designs {
+              @include vw-convert-mo(top, 20);
+              @include vw-convert-mo(right, 24);
+              z-index: 1;
+              
+              &-icon {
+                @include vw-convert-mo(margin-right, 2);
+                @include vw-convert-mo(width, 16);
+              }
+              
+              &-title {  
+                @include vw-font-size-mo(13);
+
+                &:after {
+                  @include vw-convert-mo(bottom, -4);
+                  @include vw-convert-mo(height, 2);
+                }
+
+                &-number {
+                  @include vw-convert-mo(top, -13);
+                  @include vw-convert-mo(right, -4);
+                  @include vw-convert-mo(width, 16);
+                  @include vw-convert-mo(height, 16);
+                  @include vw-font-size-mo(12);
+                  @include line-height-mo(1.4);
+                }
+              }
+            }
+          }
+        }
+
+        &-select {
+          width: 100%;
+          @include vw-convert-mo(padding, 20 24 25 24);
+
+          .watch-select {
+            &__inner {
+              &:last-child {
+                @include vw-convert-mo(margin-top, 28);
+              }
+            }
+
+            &__title {
+              @include vw-font-size-mo(14);
+              @include vw-convert-mo(letter-spacing, -0.75);
+
+              &-icon {
+                @include vw-convert-mo(width, 16);
+                @include vw-convert-mo(margin-left, 4);
+              }
+            }
+
+            &__value {
+              @include vw-convert-mo(margin-top, 16);
+
+              &-item {
+                @include vw-convert-mo(margin-right, 8);
+                
+                .tabmenu {
+                  @include vw-convert-mo(padding, 10 20 8 20);
+                  @include vw-font-size-mo(12);
+                  @include vw-convert-mo(border-radius, 23);
+                }
+              }
+
+              .value-prev, .value-next {
+                display: none;
+              }
+            }
+
+            &__item {
+              flex-wrap: nowrap;
+              overflow: auto;
+              @include vw-convert-mo(margin-top, 20);
+
+              .item-list {
+                flex: none;
+                @include vw-convert-mo(width, 92);
+                @include vw-convert-mo(margin-right, 16);
+  
+                &:nth-child(6n) {
+                  @include vw-convert-mo(margin-right, 16);
+                }
+  
+                &:nth-child(n+7) {
+                  margin-top: 0;
+                }
+  
+                &__image {
+                  @include vw-convert-mo(height, 92);
+                  @include vw-convert-mo(padding, 11);
+                  @include vw-convert-mo(border-radius, 10);
+                }
+
+                &__info {
+                  @include vw-convert-mo(padding, 9 15 0 15);
+                  @include vw-font-size-mo(12);
+                  color: #000;
+                  @include line-height-mo(1.4);
+                }
+
+                &__flag {
+                  @include vw-convert-mo(width, 29);
+                  @include vw-convert-mo(margin-top, 7);
+                  @include vw-convert-mo(padding, 3 4 1 4);
+                  @include vw-font-size-mo(10);
+                  @include vw-convert-mo(border-radius, 8);
+                }
+              }
+
+              &.band__item {
+                .item-list {
+                  &__image {
+                    .cart {
+                      @include vw-convert-mo(width, 16);
+                      @include vw-convert-mo(top, 7);
+                      @include vw-convert-mo(right, 7);
+                    }
+        
+                    .zoom-in {
+                      @include vw-convert-mo(width, 16);
+                      @include vw-convert-mo(right, 7);
+                      @include vw-convert-mo(bottom, 8);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__info {
+        @include vw-convert-mo(padding, 25 24);
+        border: none;
+        @include vw-font-size-mo(12);
+        @include line-height-mo(1.3);
+        text-align: left;
+
+        br {
+          display: block;
+        }
+      }
+
+      &__designs-popup {  
+        .designs-popup {  
+          &__contents {
+            @include vw-convert-mo(width, 248);
+            @include vw-convert-mo(padding, 26 24);
+            scrollbar-width: 0;
+              
+            &::-webkit-scrollbar {
+              width: 0;
+            }
+  
+            &::-webkit-scrollbar-thumb {
+              border-radius: none;
+            }
+  
+            &-top {  
+              .contents-top {
+                &__icon {
+                  @include vw-convert-mo(width, 20);
+                  @include vw-convert-mo(margin, -2 3 0 0);
+                }
+  
+                &__title {
+                  @include vw-convert-mo(letter-spacing, -0.55);
+
+                  &-number {
+                    @include vw-convert-mo(top, -7);
+                    @include vw-convert-mo(right, -16);
+                    @include vw-convert-mo(width, 16);
+                    @include vw-convert-mo(height, 16);
+                    @include vw-font-size-mo(12);
+                    @include line-height-mo(1.4);
+                  }
+                }
+  
+                &__close {
+                  @include vw-convert-mo(top, -2);
+                  right: 0;
+                  @include vw-convert-mo(width, 20);
+                }
+              }
+            }
+  
+            &-no-list {
+              @include vw-convert-mo(margin-top, 18);
+  
+              .contents-no-list {
+                &__title {
+                  @include vw-font-size-mo(12);
+                }
+  
+                &__image {
+                  @include vw-convert-mo(width, 93);
+                  @include vw-convert-mo(height, 93);
+                  @include vw-convert-mo(margin-top, 14);
+                  @include vw-convert-mo(padding, 6);
+                  @include vw-convert-mo(border-radius, 10);
+                }
+              }
+            }
+  
+            &-list {
+              @include vw-convert-mo(margin-top, 22);
+  
+              .contents-list {
+                &__item {
+                  @include vw-convert-mo(width, 93);
+                  @include vw-convert-mo(height, 93);
+                  @include vw-convert-mo(padding, 6);
+                  @include vw-convert-mo(border-radius, 10);
+  
+                  &:nth-child(even) {
+                    @include vw-convert-mo(margin-left, 14);
+                  }
+  
+                  &:nth-child(n+3) {
+                    @include vw-convert-mo(margin-top, 14);
+                  }
+                }
+  
+                &__delete {
+                  @include vw-convert-mo(top, -7);
+                  @include vw-convert-mo(right, -6);
+                  @include vw-convert-mo(width, 26);
+                  @include vw-convert-mo(height, 26);
+                  @include vw-convert-mo(padding, 8);
+                }
+              }
+            }
+  
+            &-check {
+              @include vw-convert-mo(margin-top, 24);
+              @include vw-font-size-mo(12);
+              @include line-height-mo(1.4);
+            }
+  
+            &-recommend {
+              @include vw-convert-mo(margin-top, 14);
+  
+              .contents-recommend {
+                &__presets {
+                  @include vw-convert-mo(width, 93);
+                  @include vw-convert-mo(height, 93);
+                  @include vw-convert-mo(padding, 6);
+                  @include vw-convert-mo(border-radius, 10);
+  
+                  &:nth-child(even) {
+                    @include vw-convert-mo(margin-left, 14);
+                  }
+  
+                  &:nth-child(n+3) {
+                    @include vw-convert-mo(margin-top, 14);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
