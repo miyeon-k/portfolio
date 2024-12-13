@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+
+
+
+
+
+
+
+
+
+/* 홈 - 랭킹  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* 홈 - 랭킹 - 탑3 */
+.home-ranking-top3 {width:100%;}
+.home-ranking-top3 > h2 {margin-top:30px; text-align:center; font-size:16px; color:#333;}
+.home-ranking-top3 > h2 > span {vertical-align:initial; font-weight:500;}
+.home-ranking-top3 > ul {margin-top:10px; padding:30px 20px; overflow:hidden;}
+.home-ranking-top3 > ul > li {position:relative; float:left; width:32%; margin-right:2%; padding:0 10px; text-align:center; border:#e5e5e5 1px solid; border-radius:15px;}
+.home-ranking-top3 > ul > li:nth-child(1) {height:200px; margin-top:10px; padding-top:10px;}
+.home-ranking-top3 > ul > li:nth-child(2) {height:210px; padding-top:20px;}
+.home-ranking-top3 > ul > li:nth-child(3) {height:190px; margin-top:20px; margin-right:0;}
+.home-ranking-top3 > ul > li p {position:absolute; top:-21px; left:50%; margin-left:-21px;}
+.home-ranking-top3 > ul > li span {display:inline-block; width:80px; height:80px; margin-top:25px; border:#e5e5e5 1px solid; border-radius:50px; overflow:hidden;}
+.home-ranking-top3 > ul > li h1 {margin-top:20px; font-weight:500; line-height:14px; color:#333;}
+.home-ranking-top3 > ul > li h2 {margin-top:5px; font-weight:500; font-size:16px;}
+.home-ranking-top3 > ul > li:nth-child(2) h2 {color:#3b86ff;}
+
+
+/* 홈 - 랭킹 - 리스트 */
+.home-ranking-list {width:calc(100% - 40px); margin:0 20px; padding:20px 20px 110px 20px; border-radius:15px; box-shadow:0 0 20px 0 rgba(0,0,0,0.1); background:#fff; overflow:hidden;}
+.home-ranking-list > dl {width:100%; margin-top:10px; overflow:hidden;}
+.home-ranking-list > dl:first-child {margin-top:0;}
+.home-ranking-list > dl > dt {position:relative; float:left; width:28%; padding-left:15px;}
+.home-ranking-list > dl > dt span {display:inline-block; width:60px; height:60px; border:#e5e5e5 1px solid; border-radius:50px; overflow:hidden;}
+.home-ranking-list > dl > dt em {position:absolute; top:18px; left:0; width:25px; height:25px; text-align:center; line-height:20px; color:#fff; border:#fff 2px solid; border-radius:30px; background:#bfbfbf;}
+.home-ranking-list > dl > dd {float:left; width:72%; padding-bottom:15px; border-bottom:#e5e5e5 1px solid;}
+.home-ranking-list > dl:last-child > dd {padding-bottom:0; border-bottom:none;}
+.home-ranking-list > dl > dd > dl {width:100%; margin-top:3px; overflow:hidden;}
+.home-ranking-list > dl > dd > dl dt {float:left; width:80%;}
+.home-ranking-list > dl > dd > dl dt h1 {margin-top:6px; font-weight:500; color:#333; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.home-ranking-list > dl > dd > dl dt h2 {color:#333;}
+.home-ranking-list > dl > dd > dl dt h2 span {vertical-align:initial; color:#f21363;}
+.home-ranking-list > dl > dd > dl dd {float:right; width:20%; padding-top:17px; text-align:right; font-size:18px;}
+
+
+/* 홈 - 랭킹 - 내랭킹 */
+.home-ranking-myinfo {position:fixed; bottom:49px; width:100%; max-width:420px; border-radius:15px 15px 0 0; background:#1b1c1d; box-shadow:0 -10px 20px rgba(0,0,0,.07); overflow:hidden;}
+.home-ranking-myinfo > dl {width:100%; padding:20px; overflow:hidden;}
+.home-ranking-myinfo > dl > dt {float:left; width:18%;}
+.home-ranking-myinfo > dl > dt span {display:inline-block; width:50px; height:50px; border:#fff 2px solid; border-radius:50%; overflow:hidden;}
+.home-ranking-myinfo > dl > dd {float:left; width:82%;}
+.home-ranking-myinfo > dl > dd > dl {width:100%; overflow:hidden;}
+.home-ranking-myinfo > dl > dd > dl dt {float:left; width:80%;}
+.home-ranking-myinfo > dl > dd > dl dt h1 {margin-top:7px; font-weight:500; line-height:14px; color:#fff; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.home-ranking-myinfo > dl > dd > dl dt h1 span {vertical-align:initial; font-weight:400;}
+.home-ranking-myinfo > dl > dd > dl dt h2 {margin-top:5px; font-size:13px; color:#fff;}
+.home-ranking-myinfo > dl > dd > dl dt h2 span {vertical-align:initial; font-weight:500; color:#f21363;}
+.home-ranking-myinfo > dl > dd > dl dd {float:left; width:20%; padding-top:12px; text-align:right;}
+.home-ranking-myinfo > dl > dd > dl dd a {font-size:20px; color:#fff;}
+
+
+/* 홈 - 랭킹 - 이벤트 */
+.home-ranking-event {width:100%;}
+.home-ranking-event > h2 {padding:30px 20px 20px 20px; text-align:center; font-size:16px; color:#333;}
+.home-ranking-event > h2 > span {vertical-align:initial; font-weight:500;}
+.home-ranking-event > div {padding:20px;}
+.home-ranking-event > div > h2 {padding-bottom:10px; font-weight:500; font-size:16px; color:#333;}
+.home-ranking-event > div > h2 > span {vertical-align:initial; color:#f21363;}
+.home-ranking-event > div > dl {padding:10px 0; border-top:#e5e5e5 1px solid; overflow:hidden;}
+.home-ranking-event > div > dl:last-child {border-bottom:#e5e5e5 1px solid;}
+.home-ranking-event > div > dl > dt {float:left;}
+.home-ranking-event > div > dl > dt > span {display:inline-block; width:50px; height:50px; border:#e5e5e5 1px solid; border-radius:50%;}
+.home-ranking-event > div > dl > dt > em {margin-left:10px; font-weight:500; color:#333;}
+.home-ranking-event > div > dl > dd {float:right; font-weight:500; font-size:16px; line-height:50px; color:#3b86ff;}
+
+
+/* 홈 - 랭킹 - 보상내역 - 차수별랭킹 */
+.home-ranking-reward-last {padding:30px 20px;}
+.home-ranking-reward-last > h2 {text-align:center; font-weight:500; font-size:16px; color:#333;}
+.home-ranking-reward-last > h3 {margin-top:2px; text-align:center; font-size:13px; line-height:20px;}
+.home-ranking-reward-last > div {margin-top:23px; padding:20px 10px 10px 10px; border:#e5e5e5 1px solid; border-left:#3b86ff 5px solid; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,.1);}
+.home-ranking-reward-last > div.hrrl-tbl02 {border-left:#1cceba 5px solid;}
+.home-ranking-reward-last > div.hrrl-tbl03 {border-left:#f21363 5px solid;}
+.home-ranking-reward-last > div > h2 {text-align:center; font-weight:500; color:#333;}
+.home-ranking-reward-last > div > table {margin-top:17px; border-bottom:#e5e5e5 1px solid;}
+.home-ranking-reward-last > div > table tr {border-top:#e5e5e5 1px solid;}
+.home-ranking-reward-last > div > table th {padding:8px;}
+.home-ranking-reward-last > div > table td {padding:8px; line-height:20px;}
+.home-ranking-reward-last > div > table > thead {background:#f5f5f5;}
+.home-ranking-reward-last > div > table > thead th {text-align:center; font-weight:500; color:#333;}
+.home-ranking-reward-last > div > table > thead th:nth-child(2) {border-left:#e5e5e5 1px solid;} 
+.home-ranking-reward-last > div > table > thead td:nth-child(2) {border-left:#e5e5e5 1px solid;}
+.home-ranking-reward-last > div > table > tbody th {font-weight:500; font-size:13px; color:#333; background:#f5f5f5;}
+.home-ranking-reward-last > div > table > tbody td {font-size:13px; border-left:#e5e5e5 1px solid;}
+.home-ranking-reward-last > div > table > tbody td span {vertical-align:initial; color:#3b86ff;}
+.home-ranking-reward-last > div > table > tbody td div:nth-child(n+2) {margin-top:10px;}
+.home-ranking-reward-last > div > table > tbody .hrrl-tbl {border-left:#e5e5e5 1px solid;}
+
+
+/* 홈 - 랭킹 - 보상내역 - 금주누적포인트 */
+.home-ranking-reward-this {width:100%;}
+.home-ranking-reward-this > h2 {padding:15px 20px; text-align:center; font-size:13px;}
+.home-ranking-reward-this > div {padding:20px; border-top:#e5e5e5 1px solid;}
+.home-ranking-reward-this > div > p {width:261px; margin:45px auto;}
+.home-ranking-reward-this > div > h2 {text-align:center; font-weight:700; font-size:18px; color:#333;}
+.home-ranking-reward-this > div > h3 {margin-top:15px; text-align:center; line-height:20px; color:#333;}
+.home-ranking-reward-this > dl {margin-top:35px; padding:20px; background:#f5f5f5;}
+.home-ranking-reward-this > dl > dt {position:relative; font-weight:700; font-size:16px; color:#333;}
+.home-ranking-reward-this > dl > dt > span {margin-left:10px; vertical-align:initial; color:#3b86ff;}
+.home-ranking-reward-this > dl > dt > div {position:absolute; top:0; right:0; color:#bfbfbf;}
+.home-ranking-reward-this > dl > dd {margin-top:20px; line-height:20px;}
+.home-ranking-reward-this > dl > dd > div {margin-top:25px; padding:5px 0; text-align:center; font-size:13px; line-height:20px; border-radius:30px; background:#fff;}
+
+.home-ranking-reward-this > h3 {padding:15px 20px; font-size:13px; color:#333; border-top:#e5e5e5 1px solid; background:#f5f5f5;}
+.home-ranking-reward-this > h3 > span {display:inline-block; width:10px; height:10px; margin-right:8px; vertical-align:initial; border:#fff 2px solid; border-radius:100%; background:#3b86ff;}
+.home-ranking-reward-this > h3 > em {margin-left:10px; vertical-align:initial; font-weight:700; font-size:16px; color:#3b86ff;}
+
+/* 표 상단 정보 */
+.home-ranking-reward-this > div > .hrrt-data-info {overflow:hidden;}
+.home-ranking-reward-this > div > .hrrt-data-info > dt {float:left; font-weight:700; font-size:16px; color:#333;}
+.home-ranking-reward-this > div > .hrrt-data-info > dd {float:right; color:#bfbfbf;}
+
+.home-ranking-reward-this > div > .hrrt-data-grade {font-size:12px; color:#999;}
+.home-ranking-reward-this > div > .hrrt-data-manager {margin-top:20px; font-weight:500;}
+.home-ranking-reward-this > div > .hrrt-data-manager > span {margin-right:5px; vertical-align:initial;}
+
+/* 표 */
+.home-ranking-reward-this > div > .hrrt-data {margin-top:20px; padding:10px 20px; border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,.1);}
+.home-ranking-reward-this > div > .hrrt-data:first-child {margin-top:0;}
+.home-ranking-reward-this > div > .hrrt-data > table {width:100%;}
+/* .home-ranking-reward-this > div > .hrrt-data > table > thead th {padding:10px 0; text-align:left; font-weight:700; font-size:16px; color:#333;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead {border-top:#e5e5e5 1px solid;} */
+.home-ranking-reward-this > div > .hrrt-data > table > thead th {padding:5px 0; text-align:left;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead th > span {margin-right:10px; vertical-align:initial;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead th > span > svg {width:15px;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead td {padding:5px 0; text-align:center; color:#333;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr > td:nth-child(2) {text-decoration:underline;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:first-child > th, .home-ranking-reward-this > div > .hrrt-data > table > thead > tr:first-child > td {padding-top:10px;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:last-child > th, .home-ranking-reward-this > div > .hrrt-data > table > thead > tr:last-child > td {padding-bottom:10px;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:first-child > th > span {color:#f21363;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:nth-child(2) > th > span {color:#3b86ff;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:nth-child(3) > th > span {color:#7ed321;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:nth-child(4) > th > span {color:#f6a93b;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:nth-child(5) > th > span {color:#a902e0;}
+.home-ranking-reward-this > div > .hrrt-data > table > thead > tr:nth-child(6) > th > span {color:#680005;}
+.home-ranking-reward-this > div > .hrrt-data > table > tbody {border-top:#e5e5e5 1px solid;}
+.home-ranking-reward-this > div > .hrrt-data > table > tbody th {padding:10px 0; text-align:left; font-weight:500; color:#333;}
+.home-ranking-reward-this > div > .hrrt-data > table > tbody td {padding:10px 0; text-align:center; color:#3b86ff;}
+
+/* 데이터 집계중 */
+.home-ranking-reward-this > div > .hrrt-data-none {padding:30px 20px; text-align:center;}
+.home-ranking-reward-this > div > .hrrt-data-none > span {font-size:30px; color:#e5e5e5;}
+.home-ranking-reward-this > div > .hrrt-data-none > h2 {margin-top:10px; font-weight:500; font-size:15px; color:#333;}
+.home-ranking-reward-this > div > .hrrt-data-none > h3 {margin-top:5px; font-size:12px; line-height:18px;}
+
+.home-ranking-reward-this > p {margin-top:10px; padding:15px 10px; text-align:center; font-size:13px; background:#f5f5f5;}
+
+
+
+
+
+
+
+
+

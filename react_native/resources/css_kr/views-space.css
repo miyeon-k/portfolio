@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+
+/* 스페이스 - 관리  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* 스페이스 - 관리 - 팔로워 */
+.space-manage-follower {padding:20px;}
+.space-manage-follower > ul {margin-bottom:10px; padding:7px; border:#e5e5e5 1px solid; border-radius:35px; overflow:hidden;}
+.space-manage-follower > ul > li {float:left; font-size:20px; color:#e5e5e5;}
+.space-manage-follower > ul > li:nth-child(2) {width:calc(100% - 45px); padding:0 10px;}
+.space-manage-follower > ul > li:nth-child(2) > input {height:auto; padding:0; vertical-align:initial; border:none;}
+.space-manage-follower > ul > li:last-child {font-size:25px;}
+.space-manage-follower > dl {padding:10px 0; border-bottom:#e5e5e5 1px solid; overflow:hidden;}
+.space-manage-follower > dl > dt {float:left; width:63%;}
+.space-manage-follower > dl > dt > span {display:inline-block; width:50px; height:50px; border:#e5e5e5 1px solid; border-radius:50%;}
+.space-manage-follower > dl > dt > em {margin-left:10px; font-weight:500; color:#333;}
+.space-manage-follower > dl > dd {float:right; width:37%; padding-top:13px; text-align:right; font-size:13px;}
+.space-manage-follower > dl > dd > a {margin-left:2px; padding:0 15px; border-radius:15px;}
+.space-manage-follower > dl > dd > a.smf-btn01 {color:#fff; background:#3b86ff;}
+.space-manage-follower > dl > dd > a.smf-btn02 {color:#333; border:#e5e5e5 1px solid;}
+
+
+/* 스페이스 - 관리 - 공지사항 - 리스트 */
+.space-manage-notice-list {width:100%;}
+.space-manage-notice-list > div {padding:20px;}
+.space-manage-notice-list > div > span {padding:1px 12px; font-size:13px; color:#fff; border-radius:20px; background:#f21363;}
+.space-manage-notice-list > div > h2 {padding-bottom:15px; font-weight:500; font-size:16px; color:#333; border-bottom:#e5e5e5 1px solid;}
+.space-manage-notice-list > div > dl {padding-top:15px; overflow:hidden;}
+.space-manage-notice-list > div > dl > dt {float:left; width:60px; height:60px; margin-right:15px; border:#e5e5e5 1px solid; border-radius:50%;}
+.space-manage-notice-list > div > dl > dd {float:left; width:calc(100% - 75px);}
+.space-manage-notice-list > div > dl > dd > h2 {display:-webkit-box; max-height:40px; font-size:13px; line-height:20px; text-overflow:ellipsis; overflow:hidden; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+.space-manage-notice-list > div > dl > dd > h3 {font-weight:500; color:#333;}
+
+.smnl-btn {position:absolute; right:25px; bottom:25px; width:50px; height:50px; text-align:center; font-size:25px; line-height:50px; color:#333; border:#e5e5e5 1px solid; border-radius:50px; box-shadow:0 11px 20px rgba(0,0,0,.16);}
+
+
+/* 스페이스 - 관리 - 공지사항 - 상세 */
+.space-manage-notice-detail {padding:20px;}
+.space-manage-notice-detail > dl {overflow:hidden;}
+.space-manage-notice-detail > dl > dt {float:left;}
+.space-manage-notice-detail > dl > dt > dl {overflow:hidden;}
+.space-manage-notice-detail > dl > dt > dl > dt {float:left; margin-right:10px;}
+.space-manage-notice-detail > dl > dt > dl > dt > p {float:left; width:35px; height:35px; margin-right:10px; border:#e5e5e5 1px solid; border-radius:30px;}
+.space-manage-notice-detail > dl > dt > dl > dt > div {float:left;}
+.space-manage-notice-detail > dl > dt > dl > dt > div > h2 {margin-top:3px; font-size:13px; line-height:13px; color:#333;}
+.space-manage-notice-detail > dl > dt > dl > dt > div > h3 {margin-top:3px; font-size:13px; line-height:13px;}
+.space-manage-notice-detail > dl > dt > dl > dd {float:left; padding:0 12px; font-size:13px; color:#fff; border-radius:20px; background:#f21363;}
+.space-manage-notice-detail > dl > dd {float:right; font-size:20px; line-height:35px;}
+.space-manage-notice-detail > h2 {margin-top:20px; font-weight:500; font-size:16px; color:#333;}
+.space-manage-notice-detail > div {margin-top:20px; padding-top:20px; border-top:#e5e5e5 1px solid; white-space:pre-line;}
+
+
+/* 스페이스 - 관리 - 공지사항 - 등록 */
+.space-manage-notice-write {padding:20px;}
+.space-manage-notice-write > ul > li {margin-top:20px;}
+.space-manage-notice-write > ul > li:first-child {margin-top:0;}
+.space-manage-notice-write > ul > li > h2 {margin-bottom:10px; font-weight:500; font-size:16px; color:#333;}
+.space-manage-notice-write > dl {margin-top:20px; overflow:hidden;}
+.space-manage-notice-write > dl > dt {float:left; font-weight:500; font-size:16px; color:#333;}
+.space-manage-notice-write > dl > dd {float:right;}
+
+
+
+
+
+
+
+
+

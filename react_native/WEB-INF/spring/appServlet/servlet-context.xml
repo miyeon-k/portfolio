@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	
+	<!-- Handles HTTP GET requests for /resources/** by efficientl
+	
+	y serving up static resources in the ${webappRoot}/resources directory -->
+
+	
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<!-- <beans:property name="prefix" value="/WEB-INF/design/" /> -->
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	
+	
+	<context:annotation-config/>
+	<context:component-scan base-package="com.sts.coin.*" />
+
+    
+    <beans:bean id="loggerInterceptor" class="com.sts.coin.common.interceptor.LoggerInterceptor"> </beans:bean>
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**/*.do" />
+			<!-- <mvc:exclude-mapping path="/*" /> -->
+			<beans:ref bean="loggerInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+	<beans:bean id="jsonView" class="net.sf.json.spring.web.servlet.view.JsonView"/>  
+	<beans:bean id="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">  
+	    <beans:property name="order" value="1"></beans:property>
+	</beans:bean>  
+	<!-- locale 세션 선언 -->	        
+	<beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <beans:property name="defaultLocale" value="en"/>
+    </beans:bean>
+    
+    
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    	<beans:property name="maxUploadSize" value="20971520" />
+    	<beans:property name="maxInMemorySize" value="10485760" />
+    </beans:bean>
+
+	<aop:aspectj-autoproxy />
+
+	<aop:config>
+  		<aop:pointcut id="txPointcut" expression="execution(* com.sts.coin.*.*.service.impl.*ServiceImpl.*(..))" />
+  		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+ 	</aop:config>
+
+	<beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <!-- Encoding 설정 -->
+        <beans:property name="defaultEncoding" value="UTF-8"/> 
+        <!-- Reload Cache 설정 -->
+        <beans:property name="cacheSeconds" value="5"/>
+        <!-- basenames 설정: 아래처럼 하면 WEB-INF 밑의 message 폴더 아래의 labels로 시작하는 모든 Property-->
+        <beans:property name="basenames">
+            <beans:list>
+                <!-- <beans:value>classpath:message/message</beans:value> -->
+                <beans:value>/WEB-INF/message/message</beans:value>
+            </beans:list>
+        </beans:property>       
+    </beans:bean>
+     
+    <!-- MessageSource를 사용하기 위한 Accessor 설정 -->
+    <beans:bean id="messageSourceAccessor" class="org.springframework.context.support.MessageSourceAccessor">
+        <beans:constructor-arg ref="messageSource"/>
+    </beans:bean>
+
+</beans:beans>

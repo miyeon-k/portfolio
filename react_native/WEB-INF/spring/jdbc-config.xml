@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+ 
+    <!-- MyBatis 맵퍼의 SQL 문장에 대한 파라미터 및 리턴 타입을 담을 클래스를 검색 할 패키지 지정 -->
+    <bean id="sqlSessionFactory"
+        class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations" value="classpath:mybatis/sqlmaps/*/*.xml" />
+		<property name="configuration">
+			<bean class="org.apache.ibatis.session.Configuration">
+				<property name="mapUnderscoreToCamelCase" value="true"/>
+				<property name="autoMappingBehavior" value="FULL"/>
+			</bean>
+		</property>
+    </bean>
+      
+    <bean id="sqlSession"
+        class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory" />
+    </bean>
+     
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+			<value>java:comp/env/jdbc/hiblocksDB</value>
+		</property>
+	</bean> 
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+ 
+ 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+  		<tx:attributes>
+   			<tx:method name="save*" rollback-for="Exception"  propagation="REQUIRED"/> 
+   			<tx:method name="update*" rollback-for="Exception"  propagation="REQUIRED"/> 
+   			<tx:method name="remove*" rollback-for="Exception"  propagation="REQUIRED"/>
+			<tx:method name="insert*" rollback-for="Exception"  propagation="REQUIRED"/>
+			<tx:method name="delete*" rollback-for="Exception"  propagation="REQUIRED"/>
+  		</tx:attributes>
+ 	</tx:advice>
+ 	
+ 	
+</beans>

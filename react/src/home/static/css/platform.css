@@ -1,0 +1,188 @@
+/******************** layout ********************/
+/* 상단영역 */
+.platform header {display:flex; justify-content:space-between; align-items:center; height:3.75rem; padding:1rem 1.5rem; border-bottom:0.063rem solid var(--color-border);}
+.platform header > a {width:9.375rem; cursor:pointer;}
+.platform header > div {cursor:pointer;}
+.platform header > div > span {margin-right:1.786rem;}
+
+
+/* 좌측영역 */
+.platform nav {position:absolute; width:6.25rem; height:calc(100% - 3.75rem); border-right:0.063rem solid var(--color-border); background:var(--color-primary);}
+.platform nav > a {display:flex; flex-direction:column; align-items:center; padding:1rem; font-size:0.813rem; line-height:0.813rem; color:var(--color-border); cursor:pointer;}
+.platform nav > a > span {margin-bottom:0.625rem; font-size:1.875rem; line-height:1.875rem;}
+.platform nav > a.active, .platform nav > a:hover {color:var(--color-font); background:var(--color-default);}
+.platform nav > a.active > span, .platform nav > a:hover > span {color:var(--color-primary);}
+
+
+/* 메인영역 */
+.platform main {position:relative; width:calc(100% - 6.25rem); height:calc(100vh - 7.5rem); margin-left:6.25rem; overflow:hidden;}
+
+
+/* 하단영역 */
+.platform footer {position:absolute; right:0; bottom:0; width:calc(100% - 6.25rem); padding:0.625rem 1.25rem; background:var(--color-font); overflow:hidden;}
+.platform footer > dl {display:flex; justify-content:space-between; align-items:center;}
+.platform footer > dl > dt {font-size:0.938rem; color:var(--color-placeholder);}
+.platform footer > dl > dt > div {margin-left:1.25rem; color:var(--color-default);}
+.platform footer > dl > dt > div::before {content:''; position:absolute; top:0.125rem; left:-0.625rem; width:0.063rem; height:1.25rem; background:var(--color-subP);}
+.platform footer > dl > dd {text-align:right; font-size:0.75rem; line-height:1.25rem; color:var(--color-subP);}
+
+
+
+
+
+/******************** member ********************/
+/* 로그인 */
+.login > p {position:relative;}
+.login > p:nth-of-type(2) {margin-top:0.313rem;}
+.login > p > input {padding-right:2.25rem; border:none; border-bottom:0.125rem solid var(--color-border);}
+.login > p > input:focus {border-color:var(--color-font);}
+.login > p > input.warning {border-color:var(--color-emphasis);}
+.login > p > label {position:absolute; top:0.625rem; right:0.625rem; color:var(--color-subP); cursor:pointer;}
+.login > em {display:inline-block; margin-top:0.625rem; font-size:0.813rem; line-height:0.813rem; color:var(--color-emphasis);}
+.login > button {width:100%; margin-top:1.25rem;}
+.login > div {display:flex; justify-content:space-between; margin-top:1.25rem; font-size:0.875rem; line-height:0.875rem; color:var(--color-subP);}
+.login > div span {cursor:pointer;}
+.login > div > p > span:first-child {margin-right:0.625rem; padding-right:0.625rem; border-right:0.125rem solid var(--color-border-light);}
+
+
+/* 약관 */
+.terms > p {font-size:1.5rem;}
+.terms label {cursor:pointer;}
+.terms > div {margin-top:1.875rem; padding-bottom:0.938rem; border-bottom:0.063rem solid var(--color-border);}
+.terms > ul {margin-top:0.938rem; font-size:0.938rem;}
+.terms > ul > li {display:flex; align-items:center; position:relative; margin-top:0.625rem;}
+.terms > ul > li:first-child {margin-top:0;}
+.terms > ul > li > label > span {font-size:0.813rem; color:var(--color-subP);}
+.terms > ul > li:nth-child(-n+3) > label > span {color:var(--color-emphasis);}
+.terms > ul > li > a {position:absolute; right:0; color:var(--color-subP);}
+.terms > button {width:100%; margin-top:1.25rem;}
+
+
+/* 회원가입 */
+.join > p {font-size:1.5rem;}
+.join > dl {margin-top:0.938rem;}
+.join > dl:first-of-type {margin-top:1.875rem;}
+.join > dl > dt {display:inline-block; position:relative;}
+.join > dl > dt::after {content:'*'; position:absolute; right:-0.625rem; color:var(--color-emphasis);}
+.join > dl:nth-of-type(4) > dt::after {display:none;}
+.join > dl > dd {margin-top:0.313rem;}
+.join > dl > dd > input:focus {border-color:var(--color-font);}
+.join > dl > dd > input::placeholder {font-size:0.875rem;}
+.join > dl > dd > input:nth-of-type(2) {margin-top:0.313rem;}
+.join > dl > dd > input.notice {border-color:var(--color-emphasis);}
+.join > em {display:inline-block; margin-top:0.625rem; font-size:0.813rem; line-height:0.813rem; color:var(--color-emphasis);}
+.join > button {width:100%; margin-top:1.25rem;}
+
+
+
+
+
+/******************** atmopedia ********************/
+/* 맵 */
+.map {display:flex; height:calc(100vh - 7.5rem); overflow:hidden;}
+.map > aside {width:25rem; border-right:0.063rem solid var(--color-border); background:var(--color-default);}
+.map > aside > section > span {font-weight:500; font-size:0.938rem;}
+.map > aside > section > span > em {margin-right:0.313rem; color:var(--color-primary);}
+.map > div {flex:1;}
+
+
+/* 탭메뉴 */
+.map .MuiTabs-flexContainer {border-bottom:0.063rem solid var(--color-border);}
+.map .MuiTabs-flexContainer button {min-width:initial; font-size:0.813rem; line-height:0.813rem; font-family:inherit; color:var(--color-subP);}
+.map .MuiTabs-flexContainer button.Mui-selected {color:var(--color-primary);}
+.map .MuiTabs-indicator {background:var(--color-primary);}
+
+
+/* 좌측 - 정보 */
+.mapInfo {z-index:10;}
+.mapInfo:hover {overflow-y:overlay;}
+.mapInfo > section {padding:1.5rem; border-bottom:0.188rem solid var(--color-border-light);}
+.mapInfo > section:last-child {border-bottom:none;}
+.mapInfo > section.info01 > div {margin-top:0.625rem;}
+.mapInfo > section.info01 .search > input {border:none; background:rgba(83,122,249,0.05);}
+.mapInfo > section.info01 .search > span {color:var(--color-primary);}
+.mapInfo > section.info02 > dl {display:flex; justify-content:space-between; align-items:flex-end; margin-top:0.313rem;}
+.mapInfo > section.info02 > dl > dt {font-weight:500; font-size:1.5rem; color:var(--color-primary);}
+.mapInfo > section.info02 > dl > dd {font-size:0.75rem; line-height:0.75rem; color:var(--color-subP);}
+.mapInfo > section.info02 > ul {display:flex; flex-wrap:wrap; justify-content:space-between; margin-top:1.25rem;}
+.mapInfo > section.info02 > ul > li {display:flex; flex-direction:column; align-items:center; width:49%; padding:0.625rem; font-size:0.875rem; border:0.063rem solid var(--color-border-light); border-radius:0.313rem;}
+.mapInfo > section.info02 > ul > li:nth-of-type(n+3) {margin-top:2%;}
+.mapInfo > section.info02 > ul > li:last-of-type {width:100%; color:var(--color-border); background:var(--color-second);}
+.mapInfo > section.info02 > ul > li > span {font-size:1.125rem;}
+.mapInfo > section.info02 > ul > li:first-of-type > span {color:#ff8080;}
+.mapInfo > section.info02 > ul > li:nth-of-type(2) > span {color:#a257ff;}
+.mapInfo > section.info02 > ul > li:nth-of-type(3) > span {color:#ff9a61;}
+.mapInfo > section.info02 > ul > li:nth-of-type(4) > span {color:#ff86f3;}
+.mapInfo > section.info02 > ul > li:last-of-type > span {color:var(--color-default);}
+.mapInfo > section.info03 .tabChart {padding:0.625rem;}
+.mapInfo > section.info04 > div {margin-top:0.625rem;}
+.mapInfo > section.info05 > span {color:var(--color-primary);}
+.mapInfo > section.info05 > ol {margin-top:0.313rem; font-size:0.875rem;}
+.mapInfo > section.info05 > ol > li {position:relative; padding-left:0.625rem;}
+.mapInfo > section.info05 > ol > li::before {content:''; display:block; position:absolute; top:0.688rem; left:0; width:0.313rem; height:0.063rem; background:var(--color-subP);}
+.mapInfo > section.info05 > ol > li > span {margin-right:0.188rem;}
+.mapInfo > section.info05 > p {margin-top:0.625rem; padding:0.625rem; font-size:0.813rem; line-height:1.375rem; color:var(--color-subP); border:0.063rem solid var(--color-border-light); border-radius:0.188rem; background:var(--color-bg);}
+
+
+/* 좌측 - 구매하기 */
+.mapBuy {padding:1.5rem;}
+.mapBuy > section {margin-top:1.25rem; padding-top:1.25rem; border-top:0.063rem solid var(--color-border-light);}
+.mapBuy > section:first-child {margin-top:0; padding-top:0; border:none;}
+.mapBuy > section.buy01 > p {margin-top:0.938rem; padding:0.625rem 0.938rem; font-size:0.875rem; border-radius:0.188rem; background:rgba(83,122,249,0.05);}
+.mapBuy > section.buy01 .buyCon {padding:0.625rem;}
+.mapBuy > section.buy01 .buyCon > p {width:100%; text-align:right; font-size:0.813rem; color:var(--color-subP);}
+.mapBuy > section.buy01 .buyCon > p > em {color:var(--color-primary);}
+.mapBuy > section.buy01 .buyCon > dl {display:flex; justify-content:space-between; align-items:center; margin-top:0.625rem;}
+.mapBuy > section.buy01 .buyCon > dl > dt {flex:2; margin-right:10%; font-size:0.938rem;}
+.mapBuy > section.buy01 .buyCon > dl > dt > div {display:flex; justify-content:space-between;}
+.mapBuy > section.buy01 .buyCon > dl > dt > div > p {text-align:right; color:var(--color-subP);}
+.mapBuy > section.buy01 .buyCon > dl > dt > div > p > span {cursor:pointer;}
+.mapBuy > section.buy01 .buyCon > dl > dt > div > p > span:nth-of-type(1) {margin-right:0.625rem;}
+.mapBuy > section.buy01 .buyCon > dl > dt > div > p > span:nth-of-type(2) {margin-left:0.625rem;}
+.mapBuy > section.buy01 .buyCon > dl > dt > div:nth-of-type(2) {margin-top:0.625rem;}
+.mapBuy > section.buy01 .buyCon > dl > dt > div.price > p > em {color:var(--color-primary);}
+.mapBuy > section.buy01 .buyCon > dl > dd {flex:1;}
+.mapBuy > section.buy01 .buyCon > dl > dd > button {width:100px; height:40px; padding:initial;}
+.mapBuy > section.buy01 .buyCon > dl > dd > button:last-child {margin-top:0.313rem;}
+.mapBuy > section.buy01 .buyCon > div {margin-top:0.938rem; padding:0.313rem 0.625rem; text-align:center; font-size:0.813rem; color:var(--color-emphasis); background:var(--color-bg);}
+.mapBuy > section.buy02 .periodChart {padding:0.625rem;}
+.mapBuy > section.buy03 > dl {display:flex; justify-content:space-between; align-items:center;}
+.mapBuy > section.buy03 > dl > dt {font-weight:500; font-size:0.938rem;}
+.mapBuy > section.buy03 > dl > dt > span {margin-right:0.313rem; color:var(--color-primary);}
+.mapBuy > section.buy03 > dl > dd {font-size:0.813rem; color:var(--color-placeholder);}
+.mapBuy > section.buy03 > dl > dd > em {color:var(--color-primary);}
+.mapBuy > section.buy03 > ol {margin-top:0.938rem;}
+.mapBuy > section.buy03 > ol > li {display:flex; justify-content:space-between; align-items:center; margin-top:0.875rem;}
+.mapBuy > section.buy03 > ol > li:first-child {margin-top:0;}
+.mapBuy > section.buy03 > ol > li > div {display:flex; align-items:center; width:80%; font-size:0.938rem;}
+.mapBuy > section.buy03 > ol > li > div > p {width:1.875rem; height:1.875rem; margin-right:0.625rem; border:0.063rem solid var(--color-border); border-radius:50%; background:var(--color-bg); overflow:hidden;}
+.mapBuy > section.buy03 > ol > li > div > em {width:80%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.mapBuy > section.buy03 > ol > li > span {font-size:0.875rem; color:var(--color-subP);}
+.mapBuy > section.buy03 > ol > li > span > em {color:var(--color-primary);}
+.mapBuy > section.buy04 > ul {display:flex; margin-top:0.938rem; text-align:center;}
+.mapBuy > section.buy04 > ul > li {flex:1; border:0.063rem solid var(--color-border-light);}
+.mapBuy > section.buy04 > ul > li:first-child {margin-right:2%;}
+.mapBuy > section.buy04 > ul > li > div {padding:0.313rem; font-size:0.875rem; color:var(--color-subP); background:var(--color-bg);}
+.mapBuy > section.buy04 > ul > li > p {padding:0.625rem;}
+.mapBuy > section.buy04 > ul > li > p > span {color:var(--color-primary);}
+
+
+
+
+
+/******************** notice ********************/
+/* 목록 */
+.notice {width:60%; min-width:75rem; height:100%; margin:0 auto; padding:3.125rem; overflow:overlay;}
+.notice > dl {display:flex; justify-content:space-between; align-items:center;}
+.notice > dl > dt {font-size:1.563rem;}
+.notice > dl > dd {width:30%;}
+.notice > ul {margin-top:3.125rem;}
+
+
+/* 상세 */
+.noticeView {max-width:50%; max-height:90%; padding:3.125rem; text-align:center; background:var(--color-default); overflow:overlay;}
+.noticeView > span {font-size:0.875rem; color:var(--color-subP);}
+.noticeView > p {margin-top:0.625rem; font-size:1.25rem; line-height:1.75rem;}
+.noticeView > div {margin-top:1.875rem; word-break:break-all;}
+.noticeView > em {display:inline-block; margin-top:1.875rem; font-size:0.875rem; color:var(--color-primary);}
+.noticeView > em > q {margin-right:0.313rem; padding:0.313rem; background:var(--color-bg);}

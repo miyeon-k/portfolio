@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+
+/* 마이페이지 - 알림  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* 마이페이지 - 알림 - 활동내역 - 리스트 */
+.mypage-inform-active-list {width:100%;}
+.mypage-inform-active-list > div {padding:20px;}
+.mypage-inform-active-list > div > h2 {padding-bottom:15px; font-weight:500; font-size:16px; color:#333; border-bottom:#e5e5e5 1px solid;}
+.mypage-inform-active-list > div > dl {padding-top:15px; overflow:hidden;}
+
+/* 일반 문구 리스트 */
+.mypage-inform-active-list > div > dl.mial-partA > dt {float:left; width:40px; height:40px; margin-right:10px; border:#e5e5e5 1px solid; border-radius:50%;}
+.mypage-inform-active-list > div > dl.mial-partA > dd {float:left; width:calc(100% - 50px); line-height:20px;}
+.mypage-inform-active-list > div > dl.mial-partA > dd > h2 {font-size:13px;}
+.mypage-inform-active-list > div > dl.mial-partA > dd > h2 > span {vertical-align:initial; color:#3b86ff;}
+.mypage-inform-active-list > div > dl.mial-partA > dd > h2 > em {vertical-align:initial; font-weight:500; color:#333;}
+.mypage-inform-active-list > div > dl.mial-partA > dd > h3 {font-size:13px;}
+
+/* 이미지 썸네일 리스트 */
+.mypage-inform-active-list > div > dl.mial-partB > dt {float:left; width:calc(100% - 50px); overflow:hidden;}
+.mypage-inform-active-list > div > dl.mial-partB > dt > p {float:left; width:40px; height:40px; margin-right:10px; border:#e5e5e5 1px solid; border-radius:50%;}
+.mypage-inform-active-list > div > dl.mial-partB > dt > div {float:left; width:calc(100% - 50px); line-height:20px;}
+.mypage-inform-active-list > div > dl.mial-partB > dt > div > h2 {font-size:13px;}
+.mypage-inform-active-list > div > dl.mial-partB > dt > div > h2 > a {vertical-align:initial;}
+.mypage-inform-active-list > div > dl.mial-partB > dt > div > h3 {font-size:13px;}
+.mypage-inform-active-list > div > dl.mial-partB > dt > div > h3 > em {vertical-align:initial; color:#333;}
+.mypage-inform-active-list > div > dl.mial-partB > dd {float:right; width:40px; height:40px; border-radius:5px;}
+
+/* 팔로우/팔로잉 리스트 */
+.mypage-inform-active-list > div > dl.mial-partC > dt {float:left; width:calc(100% - 80px); overflow:hidden;}
+.mypage-inform-active-list > div > dl.mial-partC > dt > p {float:left; width:40px; height:40px; margin-right:10px; border:#e5e5e5 1px solid; border-radius:50%;}
+.mypage-inform-active-list > div > dl.mial-partC > dt > div {float:left; width:calc(100% - 50px); line-height:20px;}
+.mypage-inform-active-list > div > dl.mial-partC > dt > div > h2 {font-size:13px;}
+.mypage-inform-active-list > div > dl.mial-partC > dt > div > h2 > a {vertical-align:initial;}
+.mypage-inform-active-list > div > dl.mial-partC > dt > div > h3 {font-size:13px;}
+.mypage-inform-active-list > div > dl.mial-partC > dt > div > h3 > em {vertical-align:initial; color:#333;}
+.mypage-inform-active-list > div > dl.mial-partC > dd {float:right;}
+.mypage-inform-active-list > div > dl.mial-partC > dd > a {padding:1px 15px; border-radius:15px;}
+.mypage-inform-active-list > div > dl.mial-partC > dd > a.mial-btn01 {color:#fff; background:#3b86ff;}
+.mypage-inform-active-list > div > dl.mial-partC > dd > a.mial-btn02 {color:#333; border:#e5e5e5 1px solid;}
+
+
+/* 마이페이지 - 알림 - FAQ - 탭메뉴 */
+.mypage-inform-faq-tab {padding:7px 0; border-top:#e5e5e5 1px solid; border-bottom:#e5e5e5 1px solid; background:#f5f5f5; overflow:hidden;}
+.mypage-inform-faq-tab > li {float:left; width:33.3%; padding:10px; text-align:center; border-top:#e5e5e5 1px solid; border-left:#e5e5e5 1px solid; background:#fff;}
+.mypage-inform-faq-tab > li:nth-child(3n+1) {border-left:none;}
+.mypage-inform-faq-tab > li:nth-child(n+4) {border-bottom:#e5e5e5 1px solid;}
+.mypage-inform-faq-tab > li.active {color:#333;}
+
+
+/* 마이페이지 - 알림 - FAQ - 리스트 */
+.mypage-inform-faq-list {padding:20px;}
+.mypage-inform-faq-list > div {border-bottom:#e5e5e5 1px solid;}
+.mypage-inform-faq-list > div > dl {padding:10px 0; overflow:hidden;}
+.mypage-inform-faq-list > div > dl > dt {float:left;}
+.mypage-inform-faq-list > div > dl > dt > h2 {color:#333;}
+.mypage-inform-faq-list > div > dl > dt > h2 > span {vertical-align:initial; font-weight:700;}
+.mypage-inform-faq-list > div > dl > dt > h3 {font-size:13px; color:#999;}
+.mypage-inform-faq-list > div > dl > dd {float:right;}
+.mypage-inform-faq-list > div > dl > dd:before, .mypage-inform-faq-list > div > dl > dd:after {display:inline-block; width:12px; height:2px; background:#777; content:''; transition:all 0.3s;}
+.mypage-inform-faq-list > div > dl > dd:after {margin-left:-12px; transform:rotate(90deg);}
+.mypage-inform-faq-list > div > dl > dd.active:after {transform:rotate(0); opacity:0;}
+.mypage-inform-faq-list > div > div {display:none; padding:20px; font-size:13px; line-height:20px; border-top:#e5e5e5 1px solid; background:#f5f5f5; white-space:pre-line; transform:translate(0, -100%); transition:all 0.3s; opacity:0;}
+.mypage-inform-faq-list > div > div.active {display:block; transform:translate(0,0); opacity:1;}
+.mypage-inform-faq-list > p {padding:30px; text-align:center; font-weight:500; color:#333;}
+.mypage-inform-faq-list > p > span {margin-left:3px; vertical-align:initial; font-size:11px;}
+
+
+
+
+
+
+
+
+
+
+/* 마이페이지 - 보상내역  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* 마이페이지 - 보상내역 - 게시물 */
+.mypage-reward-post {width:100%;}
+.mypage-reward-post > h2 {padding:15px 20px; text-align:center; font-size:13px;}
+.mypage-reward-post > div.mrp-space {padding:20px; border-top:#e5e5e5 1px solid;}
+.mypage-reward-post > div.mrp-space li p {width:70px; height:70px; text-align:center; font-size:30px; line-height:62px; color:#333; border:#e5e5e5 2px solid; border-radius:50%;}
+.mypage-reward-post > div.mrp-space li p.active {border-color:#f21363;}
+.mypage-reward-post > div.mrp-space li p.active:before {position:absolute; top:2px; left:2px; width:62px; height:62px; border:#fff 2px solid; border-radius:50%; content:'';}
+.mypage-reward-post > div.mrp-space li span {display:inline-block; width:70px; margin-top:3px; text-align:center; font-size:13px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.mypage-reward-post > ul {border-top:#e5e5e5 5px solid; overflow:hidden;}
+.mypage-reward-post > ul > li {position:relative; float:left; width:33.3%; border-right:#fff 1px solid; border-bottom:#fff 1px solid; background:#f5f5f5;}
+.mypage-reward-post > ul > li:before {display:block; padding-top:100%; content:'';}
+.mypage-reward-post > ul > li > div {position:absolute; top:0; right:0; bottom:0; left:0;}
+.mypage-reward-post > ul > li > div > div {width:100%; height:100%;}
+.mypage-reward-post > ul > li > div > h2 {display:-webkit-box; max-height:115px; padding:12px 10px; text-align:center; font-size:13px; line-height:20px; color:#333; text-overflow:ellipsis; overflow:hidden; -webkit-line-clamp:5; -webkit-box-orient:vertical;}
+.mypage-reward-post > ul > li > div > p {position:absolute; display:inline-block; bottom:3px; left:3px; padding:0 7px; font-weight:500; font-size:13px; color:#333; border-radius:10px; background:rgba(255,255,255,.5);}
+.mypage-reward-post > ul > li > div > p > span {vertical-align:initial;}
+.mypage-reward-post > div.mrp-num {padding:75px 20px; border-top:#e5e5e5 5px solid; text-align:center;}
+.mypage-reward-post > div.mrp-num > p {width:170px; margin:0 auto;}
+.mypage-reward-post > div.mrp-num > h2 {margin-top:30px; color:#333;}
+.mypage-reward-post > div.mrp-num > div {margin-top:20px; font-weight:700; font-size:30px; color:#3b86ff;}
+
+
+
+
+
+
+
+
+
+
+/* 마이페이지 - 나의보팅안내  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* 마이페이지 - 나의보팅안내 */
+.mypage-myvoting {padding:75px 20px; text-align:center;}
+.mypage-myvoting > div {position:relative; width:120px; height:120px; margin:0 auto; border-radius:50%; background:#f5f5f5; overflow:hidden;}
+.mypage-myvoting > div > span {position:absolute; bottom:20px; left:50%; font-weight:700; font-size:20px; color:#333; z-index:10; transform:translate(-50%,0);}
+.mypage-myvoting > div > p {position:absolute; top:50%; left:50%; width:104px; z-index:1; transform:translate(-50%,-50%);}
+.mypage-myvoting > div > div {position:absolute; bottom:0; left:0; width:100%; background:#3b86ff;}
+.mypage-myvoting > p {width:70%; height:9px; margin:30px auto 0 auto; border-radius:10px; background:#f5f5f5; overflow:hidden;}
+.mypage-myvoting > p > span {display:block; height:100%; border-radius:10px; background:#3b86ff;}
+.mypage-myvoting > dl {margin-top:30px;}
+.mypage-myvoting > dl > dt {font-weight:500; font-size:18px; color:#333;}
+.mypage-myvoting > dl > dt span {vertical-align:initial; color:#3b86ff;}
+.mypage-myvoting > dl > dd {margin-top:10px;}
+.mypage-myvoting > dl > dd > p {margin-top:10px; font-weight:500; font-size:16px; color:#3b86ff;}
+.mypage-myvoting > dl > dd > span {vertical-align:initial; font-weight:500; color:#333;}
+
+
+/* 마이페이지 - 나의보팅안내 - 안내 */
+.mypage-myvoting-info {padding:20px; background:#f5f5f5;}
+.mypage-myvoting-info > h2 {font-weight:500; font-size:16px; color:#333;}
+.mypage-myvoting-info > ul {margin-top:15px;}
+.mypage-myvoting-info > ul > li {padding-left:10px;}
+.mypage-myvoting-info > ul > li:before {display:inline-block; width:5px; height:1px; margin:0 5px 0 -10px; vertical-align:super; background:#777; content:'';}
+
+
+
+
+
+
+
+
+
